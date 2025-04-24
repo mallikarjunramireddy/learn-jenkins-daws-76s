@@ -1,9 +1,6 @@
 pipeline {
-    agent {
-        node {
-            label 'AGENT-1'
-        }
-    }
+    agent any
+    {
     environment { 
         GREETING = 'Hello Jenkins'
     }
@@ -71,4 +68,5 @@ pipeline {
             echo 'I will say Hello when pipeline is success'
         }
     }
+}
 }
